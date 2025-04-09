@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LanchesApp.PaginaBebidas"
+             Title="PaginaBebidas">
+
+    <CollectionView ItemsSource="{Binding Bebidas}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame BorderColor="Gray" Margin="10" Padding="10" CornerRadius="10">
+                    <StackLayout>
+                        <Image Source="{Binding Imagem}" HeightRequest="100"/>
+                        <Label Text="{Binding Nome}" FontAttributes="Bold" />
+                        <Label Text="{Binding Descricao}" />
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    
+</ContentPage>
